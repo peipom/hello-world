@@ -4,7 +4,7 @@ import csv
 URL = 'https://diemthi.vnanet.vn/Home/SearchBySobaodanh'
 
 start = 1000002
-end = 1000003
+end = 1000008
 header = ['Code', 'Toan', 'NguVan', 'NgoaiNgu', 'VatLi', 'HoaHoc', 'SinhHoc', 'KHTN', 'DiaLi', 'LichSu', 'GDCD', 'KHXH']
 
 with open('clean_data.csv', 'w', encoding='utf-8', newline='') as f:
@@ -30,7 +30,7 @@ with open('clean_data.csv', 'w', encoding='utf-8', newline='') as f:
 			for x, y in data[0].items():
 				if y == '':
 					data[0][x] = '-1'
-				writer.writerows(data)
+			writer.writerows(data)
 		else:
 			new_dict = {}
 			for key in header:
